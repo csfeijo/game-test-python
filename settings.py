@@ -2,7 +2,7 @@
 SCREEN_WIDTH  = 800
 SCREEN_HEIGHT = 600
 FPS           = 60
-TITLE         = "Super Python"
+TITLE         = "SUPER THÉO"
 
 # ── Cores ─────────────────────────────────────────────────────────────────────
 WHITE    = (255, 255, 255)
@@ -17,14 +17,31 @@ SKY_BLUE = (107, 140, 255)
 GRAY     = (120, 120, 120)
 
 # ── Jogador ───────────────────────────────────────────────────────────────────
-PLAYER_SPEED         = 4
-PLAYER_JUMP_POWER    = -16
-PLAYER_GRAVITY       = 0.8
-PLAYER_MAX_FALL      = 14
 PLAYER_WIDTH         = 32
 PLAYER_HEIGHT        = 48
 PLAYER_LIVES         = 3
-PLAYER_INVINCIBILITY = 120   # frames (2 s a 60 fps)
+PLAYER_INVINCIBILITY = 120    # frames (2 s a 60 fps)
+
+# Movimento horizontal
+PLAYER_ACCEL         = 0.9    # aceleração por frame no chão
+PLAYER_AIR_CONTROL   = 0.55   # fator de aceleração no ar
+PLAYER_FRICTION      = 0.76   # desaceleração ao soltar tecla (multiplicador/frame)
+PLAYER_MAX_SPEED     = 5.5    # velocidade horizontal máxima (px/frame)
+
+# Pulo
+PLAYER_JUMP_POWER    = -15.0  # velocidade inicial do pulo
+PLAYER_JUMP_CUT      = 0.38   # multiplicador ao soltar cedo (pulo baixo)
+
+# Gravidade assimétrica (arco estilo Mario)
+PLAYER_GRAVITY       = 0.60   # gravidade subindo
+PLAYER_FALL_GRAVITY  = 1.10   # gravidade caindo (descida mais rápida)
+PLAYER_MAX_FALL      = 15.0   # velocidade máxima de queda
+
+# ── Pontuação ─────────────────────────────────────────────────────────────────
+SCORE_COIN         = 100
+SCORE_ENEMY        = 200
+SCORE_POWERUP      = 500
+SCORE_TIME_FACTOR  = 10      # multiplicado pelo tempo restante no fim de fase
 
 # ── Inimigo ───────────────────────────────────────────────────────────────────
 ENEMY_SPEED  = 1.5
